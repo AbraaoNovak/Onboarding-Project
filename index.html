@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/Style/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+            <a href="#"><img src="/Images/logo_com_nome.svg" class="logo"></a>
+            <h2 class="title__header">Onboarding Checklist</h2>
+    </header>
+
+    <main>
+        <div class="paper__form">
+            <h1 class="title__form">This is a Onboarding Checklist!</h1>
+            <p class="description__form">Please fill in the fields below carefully and with the correct data.</p>
+            <section class="formulario">
+                <form>
+                    <label class="name">Full Name: <input type="text" id="fullName" name="fullName" required /></label>
+                    <label class="email">Email Tip: <input type="email" id="email" name="email" readonly required/></label>
+                    <label class="coordinator">Coordinator: <input type="text" id="coordinator" name="coordinator" required/></label>
+                    <label class="area">Area: 
+                        <select id="area" name="area" class="area" required>
+                            <option value="" disabled selected>Select Area</option>
+                            <option value="IT">IT</option>
+                            <option value="HR">HR</option>
+                            <option value="Engineering">Engineering</option>
+                            <option value="BIM">BIM</option>
+                            <option value="Sales">Sales</option>
+                            <option value="Customer Services">Customer Services</option>
+                        </select>
+                    </label>
+                    <label class="equipment">Equipment: <input type="text" id="equipment" name="equipment" readonly  required/></label>
+
+            
+                        <div class="peripherals--div">
+                            <label class="peripherals">Don't forget the <strong class="peripherals__strong">Peripherals:</strong>
+                        </div>
+                        <div class="checkbox-group">
+                            <label class="mouse"><input type="checkbox" name="peripherals" value="Mouse" > Mouse</label>
+                            <label class="keyboard"><input type="checkbox" name="peripherals" value="Keyboard"> Keyboard</label>
+                            <label class="headset"><input type="checkbox" name="peripherals" value="Headset"> Headset</label>
+                            <label class="mousepad"><input type="checkbox" name="peripherals" value="Mousepad"> Mousepad</label>
+                            <label class="kit__onboarding"><input type="checkbox" name="peripherals" value="Kit Onboarding"> Kit Onboarding</label>
+                        </div>
+                    </label>
+
+                    <div class="channels-div">
+                        <label class="channels">Preferred <strong class="channels__strong">Channels:</strong></label>
+                        <div class="checkbox-group-circles">
+                            <label class="channel-option"><input type="checkbox" name="channels" value="Joinville_Office">#Joinville_Office</label>
+                            <label class="channel-option"><input type="checkbox" name="channels" value="SP_Office">#SP_Office</label>
+                            <label class="channel-option"><input type="checkbox" name="channels" value="General">#General</label>
+                            <label class="channel-option"><input type="checkbox" name="channels" value="Engineering_Group">#Engineering_Group</label>
+                        </div>
+                    </div>
+                    <p class="confirmation-text" id="confirmationText" style="display: none;">Everything filled! Now it's up to <strong>IT</strong>.<br>Thank you very much :)</p>
+                    
+                    <button type="submit" class="send-btn">SEND</button>
+                </form>
+            </section>
+        </div>
+
+        
+        
+    </main>
+
+<script src="/Script/confirmation-text.js"></script>
+<script src="/Script/form-script.js"></script>
+<script src="/Script/name-email.js"></script>
+</body>
+</html>

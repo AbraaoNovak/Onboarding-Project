@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const inputs = document.querySelectorAll('#fullName, #email, #coordinator, #area, #equipment');
+    const inputs = document.querySelectorAll('#fullName, #email, #leader, #department, #equipment');
     const confirmationText = document.getElementById('confirmationText');
 
     function updateMessageVisibility() {

@@ -11,6 +11,7 @@ html, body {
     margin: 0;
 }
 body {
+    
     font-size: 16px;
     font-family: "Montserrat", sans-serif;
     
@@ -43,10 +44,10 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
     background: url("/Images/Simple_Shiny.svg");
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100%;
 }
 
 .paper__form {
@@ -78,7 +79,7 @@ form {
 label {
     text-align: left
 }
-.name, .email, .coordinator, .area, .equipment {
+.name, .email, .leader, .department, .equipment {
     display: flex;
     justify-content: space-between; /* Espaça os elementos dentro da label */
     align-items: center;
@@ -87,7 +88,7 @@ label {
     font-size: 0.8rem;
 }
 
-.name input, .email input, .coordinator input, .area select, .equipment input {
+.name input, .email input, .leader input, .department select, .equipment input {
     /* flex: 1; */
     min-width: 80%; /* Garante que o input não fique menor que 50% da largura disponível */
     margin-left: 20px; /* Espaço entre o rótulo e o input */
@@ -99,9 +100,9 @@ label {
     font-size: 0.8rem;
 }
 
-.area select {
+.department select {
     height: 35px; /* Ajuste para alinhar com os inputs */
-    min-width: 80%
+    min-width: 80%;
     border-radius: 10px;
     background-color: #f5ffff;
     border: 1px solid #cccccc;
@@ -158,6 +159,29 @@ label {
 .equipment input {
     font-family: "Montserrat", sans-serif;
     font-size: 0.8rem;
+}
+.equipment {
+    margin: 0 0 2rem 0;
+}
+/* .stock {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.2rem;
+    color: #0c7886;
+    font-weight: 600;
+    margin: 0 0 1rem 0;
+} */
+.stock-available {
+    color: #0c7886; /* Verde para disponível */
+    text-align: center;
+    font-weight: 600;
+    margin: 0 0 1rem 0;
+}
+
+.stock-unavailable {
+    color: #dc3545; /* Vermelho para indisponível */
+    text-align: center;
+    font-weight: 600;
+    margin: 0 0 1rem 0;
 }
 .channels-div {
     text-align: center;

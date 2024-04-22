@@ -77,18 +77,25 @@ form {
     margin: 3em auto;
 }
 label {
-    text-align: left
-}
-.name, .email, .leader, .department, .equipment {
-    display: flex;
-    justify-content: space-between; /* Espaça os elementos dentro da label */
-    align-items: center;
+    text-align: left;
+    /* display: flex;
+    justify-content: space-between;
+    align-items: center; */
     margin: 0.5rem 0; /* Ajusta o espaçamento vertical entre as labels */
     font-family: "Montserrat", sans-serif;
     font-size: 0.8rem;
 }
+.name, .email, .leader, .department, .equipment, .position, .location, .remote-adress {
+    display: flex;
+    justify-content: space-between; /* Espaça os elementos dentro da label */
+    align-items: center;
+    /* margin: 0.5rem 0; */
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.8rem;
+}
 
-.name input, .email input, .leader input, .department select, .equipment input {
+
+.name input, .email input, .leader input, .position input, .department select, .equipment input, .date input, .location select, .remote-adress input {
     /* flex: 1; */
     min-width: 80%; /* Garante que o input não fique menor que 50% da largura disponível */
     margin-left: 20px; /* Espaço entre o rótulo e o input */
@@ -98,6 +105,15 @@ label {
     padding: 0 10px; /* Ajuste de padding horizontal para o conteúdo do input */
     border: 1px solid #cccccc;
     font-size: 0.8rem;
+    padding: 0 10px;
+    font-family: "Montserrat", sans-serif;
+}
+.date-form {
+    text-align: end;
+    margin: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .department select {
@@ -107,15 +123,26 @@ label {
     background-color: #f5ffff;
     border: 1px solid #cccccc;
 }
-.peripherals {
+.access-info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 1rem auto; /* Espaço acima do texto de acessos */
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.8rem;
+    color: #0c7886; /* Ou qualquer cor que combine com seu layout */
+    font-weight: 600;
+}
+.peripherals, .channels {
     text-align: start;
     margin: 1rem auto;
 }
 .mouse, .keyboard, .headset, .mousepad, .kit__onboarding {
     margin: 1rem 1rem 0 0;
 }
-.peripherals__strong {
+.peripherals__strong, .channels__strong {
     font-size: 1rem;
+    margin-left: 1rem;
     color: #0c7886;
 }
 .peripherals--div {
@@ -143,7 +170,6 @@ label {
     appearance: none;         /* Remove estilo padrão para browsers modernos */
     width: 20px;  /* Largura do checkbox */
     height: 20px; /* Altura do checkbox */
-    border-radius: 50%; /* Faz o checkbox circular */
     border: 2px solid #0c7886; /* Borda sólida com cor do tema */
     vertical-align: middle;
     margin-right: 10px; /* Espaço entre o checkbox e o texto */
@@ -160,16 +186,7 @@ label {
     font-family: "Montserrat", sans-serif;
     font-size: 0.8rem;
 }
-.equipment {
-    margin: 0 0 2rem 0;
-}
-/* .stock {
-    font-family: "Montserrat", sans-serif;
-    font-size: 1.2rem;
-    color: #0c7886;
-    font-weight: 600;
-    margin: 0 0 1rem 0;
-} */
+
 .stock-available {
     color: #0c7886; /* Verde para disponível */
     text-align: center;
@@ -210,7 +227,6 @@ label {
     appearance: none;
     width: 20px;
     height: 20px;
-    border-radius: 50%; /* Circular */
     border: 2px solid #0c7886; /* Borda sólida com a cor do tema */
     vertical-align: middle;
     margin-right: 10px;
@@ -228,6 +244,20 @@ label {
     font-family: "Montserrat", sans-serif; /* Mantém a fonte consistente com o resto do formulário */
     font-size: 1rem; /* Define um tamanho de fonte */
     color: #0c7886; /* Cor do texto, ajuste conforme necessário para combinar com seu design */
+}
+.observations__area textarea {
+    width: calc(100% - 90px); /* Subtrai o espaço do label */
+    margin-left: 20px; /* Espaço uniforme após o label */
+    height: auto; /* Altura automática baseada em 'rows' */
+    border-radius: 10px; /* Bordas arredondadas */
+    background-color: #f5ffff; /* Cor de fundo */
+    border: 1px solid #cccccc; /* Borda sutil */
+    padding: 10px; /* Espaço interno ao redor do texto */
+    font-size: 0.8rem; /* Tamanho de fonte padrão */
+    font-family: "Montserrat", sans-serif; /* Fonte consistente */
+}
+.observation__title {
+    display: flex;
 }
 
 .send-btn {
@@ -248,4 +278,17 @@ label {
 .send-btn:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra mais pronunciada no hover */
     transform: translateY(-2px); /* Efeito de "levantar" o botão quando o mouse passa por cima */
+}
+input:focus, select:focus, textarea:focus {
+    border-color: #125f69; /* Uma cor de borda mais leve */
+    outline: none; /* Remove o contorno padrão que os navegadores aplicam ao focar */
+    box-shadow: 0 0 5px rgba(160, 160, 160, 0.5); /* Adiciona um leve box shadow para destacar o foco */
+}
+input, select, textarea {
+    transition: 0.3s all;
+}
+select {
+    /* suas propriedades atuais */
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+
 }

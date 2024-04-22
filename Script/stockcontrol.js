@@ -2,16 +2,21 @@ document.addEventListener('DOMContentLoaded', function() {
     const equipmentData = {
     'IT': 'DELL LATITUDE 3540',
     'HR': 'DELL LATITUDE 3540',
-    'Engineering': 'DELL G15 5525',
-    'BIM': 'DELL G15 5525',
+    'BDA Design': 'DELL G15 5525',
+    'BIM Design': 'DELL G15 5525',
     'Sales': 'DELL LATITUDE 3540',
-    'Customer Services': 'DELL LATITUDE 3540',
-    'Supply Chain': 'DELL LATITUDE 3540',
+    'Online Sales': 'DELL LATITUDE 3540',
     'FA Design': 'DELL G15 5525',
     'Estimating': 'DELL G15 5525',
-    'Project Management': 'DELL LATITUDE 3540',  // Fixed typo from 'Project Menagment'
-    'Sales Representative': 'DELL LATITUDE 3540',
-    'Sales Support & Online Sales': 'DELL LATITUDE 3540'
+    'Project Menagement': 'DELL LATITUDE 3540',  // Fixed typo from 'Project Menagment'
+    'Marketing': 'DELL G15 5587 ',
+    'Sales Support': 'DELL LATITUDE 3540',
+    'Purchasing': 'DELL LATITUDE 3540',
+    'Logistics': 'DELL LATITUDE 3540',
+    'Finance': 'DELL LATITUDE 3540',
+    'BPM': 'DELL LATITUDE 3540',
+    'Costumer Success': 'DELL LATITUDE 3540'
+
     };
 
     const stockData = {

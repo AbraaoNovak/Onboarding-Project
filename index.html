@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/Style/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="icon" href="/Images/favicon.png" type="image/x-icon">
+    <title>Checklist Onboarding</title>
 </head>
 <body>
     <header>
@@ -21,27 +22,46 @@
                     <label class="name">Full Name: <input type="text" id="fullName" name="fullName" required /></label>
                     <label class="email">Email Tip: <input type="email" id="email" name="email" readonly required/></label>
                     <label class="leader">Leader: <input type="text" id="leader" name="leader" required/></label>
-                    <label class="leader">Position: <input type="text" id="position" name="position" required/></label>
+                    <label class="position">Position: <input type="text" id="position" name="position" required/></label>
+                    
+                    <label class="location-form location">Location: 
+                        <select id="location" name="location" class="location" required>
+                            <option value="" disabled selected>Remote or Local?</option>
+                            <option value="Local">Local</option>
+                            <option value="Remote">Remote</option>
+                            </select>
+                            </label>
+
+                            <div id="additional-info"></div>
                     
                    
                     <label class="department">Department: 
                         <select id="department" name="department" class="department" required>
                             <option value="" disabled selected>Select Department</option>
                             <option value="IT">IT</option>
-                            <option value="HR">HR</option>
-                            <option value="Engineering">Engineering</option>
-                            <option value="BIM">BIM</option>
-                            <option value="Sales Representative">Sales Representative</option>
-                            <option value="Sales Support & Online Sales">Sales Support & Online Sales</option>
-                            <option value="Customer Services">Customer Services</option>
-                            <option value="Supply Chain">Supply Chain</option>
+                            <option value="BPM">BPM</option>
+                            <option value="Marketing">Marketing</option>
+                            <option value="BIM Design">BIM Design</option>
+                            <option value="Sales">Sales</option>
+                            <option value="Sales Support">Sales Support</option>
+                            <option value="Online Sales">Online Sales</option>
+                            <option value="BDA Design">BDA Design</option>
                             <option value="FA Design">FA Design</option>
-                            <option value="Project Menagement">Project Menagement</option>
+                            <option value="Project Management">Project Management</option>
                             <option value="Estimating">Estimating</option>
-                            
+                            <option value="Finance">Finance</option>
+                            <option value="Purchasing">Purchasing</option>
+                            <option value="Logistics">Logistics</option>
+                            <option value="HR">HR</option>
+                            <option value="Costumer Success">Costumer Success</option>
                         </select>
                     </label>
+
+                    <div id="access-section"></div>
+
                     <label class="equipment">Equipment: <input type="text" id="equipment" name="equipment" readonly  required/></label>
+                    <label class="date-form date">Start Date: <input type="date" id="date" name="date" required></label>
+                        
                     <p id="stockStatus" style="text-align: center; display: none;" class="stock">Availability: </p>
 
             
@@ -57,17 +77,19 @@
                         </div>
                     </label>
 
+                    <!-- Seleção de canais no Slack -->
                     <div class="channels-div">
                         <label class="channels">Preferred <strong class="channels__strong">Channels:</strong></label>
                         <div class="checkbox-group-circles">
                             <label class="channel-option"><input type="checkbox" name="channels" value="Joinville_Office">#Joinville_Office</label>
                             <label class="channel-option"><input type="checkbox" name="channels" value="SP_Office">#SP_Office</label>
-                            <label class="channel-option"><input type="checkbox" name="channels" value="General">#General</label>
-                            <label class="channel-option"><input type="checkbox" name="channels" value="Engineering_Group">#Engineering_Group</label>
-                            <label class="channel-option"><input type="checkbox" name="channels" value="Random">#Random</label>
                         </div>
                     </div>
                     <p class="confirmation-text" id="confirmationText" style="display: none;">Everything filled! Now it's up to <strong>IT</strong>.<br>Thank you very much :)</p>
+
+                    <label class="observations__area observation__title">Observations:
+                        <textarea id="observations" name="observations" class="observations__area" rows="4""></textarea>
+                    </label>
                 
                         <button type="submit" class="send-btn">SEND</button>
                 
@@ -84,5 +106,7 @@
 <script src="/Script/confirmation-text.js"></script>
 <script src="/Script/form-script.js"></script>
 <script src="/Script/name-email.js"></script>
+<script src="/Script/local.js"></script>
+<script src="/Script/access-department.js"></script>
 </body>
 </html>

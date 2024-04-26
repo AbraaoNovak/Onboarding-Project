@@ -4,7 +4,7 @@ document.querySelector('.send-btn').addEventListener('click', function(event) {
         "emailTip": "abraao.novak@jemsystems.com",
         "leader": "Eu mermo",
         "position": "Severino",
-        "location":"Joinville",
+        "location":"Local",
         "officeLocation": "Joinville",
         "department": "IT",
         "equipment": "DELL LATITUDE 3540",

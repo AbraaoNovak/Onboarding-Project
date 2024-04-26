@@ -30,8 +30,18 @@ document.addEventListener('DOMContentLoaded', function() {
     var date = document.getElementById("date") ? document.getElementById("date").value : '';
     console.log(date);
 
-    var stockStatus = document.getElementById("#stockStatus") ? document.getElementById("#stockStatus").value : '';
-    console.log(stockStatus);
+    var peripheralsChecked = Array.from(document.querySelectorAll('.checkbox-group input[type="checkbox"]:checked'))
+                                 .filter(input => input.value !== "All Above") // Exclui 'All Above' dos resultados
+                                 .map(input => input.value);
+    console.log('Periféricos selecionados:', peripheralsChecked);
+
+     // Novo código para checar os canais selecionados
+     var channelsChecked = Array.from(document.querySelectorAll('.checkbox-group-circles input[type="checkbox"]:checked'))
+     .map(input => input.value);
+console.log('Canais selecionados:', channelsChecked);
+
+var observations = document.getElementById("observations") ? document.getElementById("observations").value : '';
+    console.log(observations);
 
   
 

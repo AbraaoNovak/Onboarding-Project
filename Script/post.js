@@ -12,6 +12,9 @@ document.addEventListener('DOMContentLoaded', function() {
     var position = document.getElementById("position") ? document.getElementById("position").value : '';
     console.log(position);
 
+    var identification = document.getElementById("identification") ? document.getElementById("identification").value : '';
+    console.log(identification);
+
     var location = document.getElementById("location") ? document.getElementById("location").value : '';
     console.log(location);
 

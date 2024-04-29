@@ -85,7 +85,7 @@ label {
     font-family: "Montserrat", sans-serif;
     font-size: 0.8rem;
 }
-.name, .email, .leader, .department, .equipment, .position, .location, .remote-adress {
+.name, .email, .leader, .department, .equipment, .position, .identification, .location, .remote-adress {
     display: flex;
     justify-content: space-between; /* Espaça os elementos dentro da label */
     align-items: center;
@@ -95,7 +95,7 @@ label {
 }
 
 
-.name input, .email input, .leader input, .position input, .department select, .equipment input, .date input, .location select, .remote-adress input {
+.name input, .email input, .leader input, .position input, .identification input, .department select, .equipment input, .date input, .location select, .remote-adress input {
     /* flex: 1; */
     min-width: 80%; /* Garante que o input não fique menor que 50% da largura disponível */
     margin-left: 20px; /* Espaço entre o rótulo e o input */

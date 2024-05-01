@@ -49,17 +49,20 @@ var observations = document.getElementById("observations") ? document.getElement
   
 
     axios.post('https://fireguard.jemsystems.com/api/onboarding', {
-      "emailTip": "abraao.novak@jemsystems.com",
-      "leader": "Eu mermo",
-      "position": "Severino",
-      "location": "Local",
-      "officeLocation": "Joinville",
-      "department": "IT",
-      "equipment": "DELL LATITUDE 3540",
-      "date": "2024-12-24",
-      "peripherals": [
-        "mouse"
-      ]
+      
+    "fullName": fullName,
+    "emailTip": email,
+    "leader": leader,
+    "position": position,
+    "location": location,
+    "officeLocation": officeLocation,
+    "remoteAddress": remoteAddress,
+    "department": department,
+    "equipment": equipment,
+    "date": date,
+    "peripherals": peripheralsChecked,
+    "channels": channelsChecked,
+    "observations": observations
     })
     .then(function (response) {
       console.log(response);

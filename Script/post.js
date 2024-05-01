@@ -55,6 +55,7 @@ var observations = document.getElementById("observations") ? document.getElement
     "leader": leader,
     "position": position,
     "location": location,
+    "identification": identification,
     "officeLocation": officeLocation,
     "remoteAddress": remoteAddress,
     "department": department,
